@@ -1,0 +1,19 @@
+//ecluid postulate: 
+//if hcf of (a,b) is c then c will also be the hcf of (b,a%b) {a>b},{a%b=>remainder when a is divided by b}
+//if hcf of (a,b) is c then c will also be the hcf of (b,a-b) {a>b}
+
+***************************************************************************************************************
+int hcfof(int a,int b){
+   if(b>a) return hcfof1(b,a); // switching arguments if b>a 
+   if(b==0) return a; // if one of the number in zero another will be hcf (base case)
+   return hcfof1(b,a%b); // using ecluid posulate // recurrsive call
+}
+
+***************************************************************************************************************
+// lcm(a,b) = (a / gcd(a, b)) * b
+
+// Function to calculate LCM
+int lcm(int a, int b) {
+    return (a / hcfof(a, b)) * b;
+}
+***************************************************************************************************************
