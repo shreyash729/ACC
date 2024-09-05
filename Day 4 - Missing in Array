@@ -1,0 +1,11 @@
+int missingNumber(int n, int arr[]) {
+    int a = 0;
+    for(int i=0;i<n;i++){
+        a=i+1;
+        if(arr[i]!=a){
+            return a;
+        }
+        a = 0;
+    }
+    
+}
