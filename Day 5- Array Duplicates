@@ -1,0 +1,23 @@
+int n = arr.size();  // Get the size of the input vector
+        vector<int> freq(n, 0);  // Frequency array to count occurrences of each element
+
+        // Increment the frequency for each element in the array
+        for (int i = 0; i < n; i++) {
+            freq[arr[i]]++;
+        }
+
+        // Store the repeating elements in a result vector
+        vector<int> result;
+        for (int i = 0; i < n; i++) {
+            if (freq[i] > 1) {
+                result.push_back(i);
+            }
+        }
+
+        // If no repeating elements are found, return -1
+        if (result.empty()) {
+            return {-1};
+        }
+
+        return result;
+    }
