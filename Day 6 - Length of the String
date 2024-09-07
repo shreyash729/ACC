@@ -1,0 +1,14 @@
+
+#include <bits/stdc++.h>
+using namespace std;
+int main() {
+    // Write C++ code here
+    string s = "shreyash chaturvedi";
+    int count = 0;
+    while(s[count]){
+        count++;
+    }
+    cout<<count;
+
+    return 0;
+}
